@@ -28,4 +28,15 @@ public class UserTest {
         user2.setLastName("Dupont");
         Assert.assertNotEquals(user1, user2);
     }
+    
+    @Test
+    public void test4() {
+        User user1 = new User();
+        User user2 = new User();
+        user1.setLastName("Dupont");
+        user1.setFirstName("Jean");
+        user2.setLastName("Dupont");
+        user2.setFirstName("Christophe");
+        Assert.assertNotEquals(user1.toString(), user2.toString());
+    }
 }
