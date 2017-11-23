@@ -56,4 +56,11 @@ public class UserTest {
         user1.setLastName("Dupont");
         Assert.assertEquals(user1.hashCode(), user2.hashCode());
     }
+    
+    @Test
+    public void test7() {
+        User user1 = new User();
+        User user2 = new User();
+        Assert.assertNotEquals(user1.getId(), user2.getId());
+    }
 }
