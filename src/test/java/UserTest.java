@@ -19,5 +19,13 @@ public class UserTest {
         user.setLastName("Dupont");
 //        Assert.assertThat(user.getLastName(), IsEqual.equalTo("Dupont"));
     }
-
+    
+    @Test
+    public void test3() {
+        User user1 = new User();
+        User user2 = new User();
+        user1.setLastName("Dupont");
+        user2.setLastName("Dupont");
+//        Assert.assertThat(user1.equals(user2), false);
+    }
 }

@@ -1,12 +1,17 @@
 package users;
 
 public class User {
-
-	private Long id;
+	
+	private static Long idGenerator = 1L;
+	private final Long id;
 
 	private String lastName;
 
 	private String firstName;
+	
+	public User() {
+		this.id = User.idGenerator++;
+	}
 
 	public String getLastName() {
 		return lastName;
@@ -26,10 +31,6 @@ public class User {
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	@Override
