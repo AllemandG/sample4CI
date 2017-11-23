@@ -74,4 +74,16 @@ public class UserTest {
         user2.setFirstName("Christophe");
         Assert.assertNotEquals(user1.getFirstName(), user2.getFirstName());
     }
+    
+    @Test
+    public void test9() {
+        User user1 = new User();
+        Assert.assertNotEquals(user1, null);
+    }
+    
+    @Test
+    public void test10() {
+        User user1 = new User();
+        Assert.assertEquals(user1, user1);
+    }
 }
