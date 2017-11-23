@@ -10,14 +10,14 @@ public class UserTest {
     public void test1() {
         User user = new User();
         user.setFirstName("Jean");
-//        Assert.assertThat(user.getLastName(), IsEqual.equalTo("Jean"));
+        Assert.assertThat(user.getFirstName(), IsEqual.equalTo("Jean"));
     }
 
     @Test
     public void test2() {
         User user = new User();
         user.setLastName("Dupont");
-//        Assert.assertThat(user.getLastName(), IsEqual.equalTo("Dupont"));
+        Assert.assertThat(user.getLastName(), IsEqual.equalTo("Dupont"));
     }
     
     @Test
@@ -26,6 +26,6 @@ public class UserTest {
         User user2 = new User();
         user1.setLastName("Dupont");
         user2.setLastName("Dupont");
-//        Assert.assertThat(user1.equals(user2), false);
+        Assert.assertNotEquals(user1, user2);
     }
 }
