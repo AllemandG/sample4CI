@@ -39,4 +39,21 @@ public class UserTest {
         user2.setFirstName("Christophe");
         Assert.assertNotEquals(user1.toString(), user2.toString());
     }
+    
+    @Test
+    public void test5() {
+        User user1 = new User();
+        User user2 = new User();
+        user1.setLastName("Dupont");
+        user2.setLastName("Dupont");
+        Assert.assertNotEquals(user1.hashCode(), user2.hashCode());
+    }
+    
+    @Test
+    public void test6() {
+        User user1 = new User();
+        User user2 = user1;
+        user1.setLastName("Dupont");
+        Assert.assertEquals(user1.hashCode(), user2.hashCode());
+    }
 }
